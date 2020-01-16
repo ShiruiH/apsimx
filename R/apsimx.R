@@ -113,10 +113,10 @@ auto_detect_apsimx <- function(){
   
     if(grepl("Linux", Sys.info()[["sysname"]])){
       
-      find.apsim <- grep("apsim", list.files("/usr/local/lib"))
+      find.apsim <- grep("apsim", list.files("/data/cephfs/punim0898"))
       if(length(find.apsim) == 0) stop("APSIM-X not found")
       
-      apsimx.versions <- list.files("/usr/local/lib/apsim")
+      apsimx.versions <- list.files("/data/cephfs/punim0898/ApsimX_x86")
       ## Note: Apparently Debian does not tolerate multiple 
       ## versions of APSIM-X installed, date 2019-12-12
       if(length(apsimx.versions) > 1){

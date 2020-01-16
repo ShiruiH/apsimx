@@ -116,7 +116,7 @@ auto_detect_apsimx <- function(){
       find.apsim <- grep("apsim", list.files("/data/cephfs/punim0898"))
       if(length(find.apsim) == 0) stop("APSIM-X not found")
       
-      apsimx.versions <- list.files("/data/cephfs/punim0898/ApsimX_x86")
+      apsimx.versions <- list.files("/data/cephfs/punim0898/ApsimX_x86/ApsimX")
       ## Note: Apparently Debian does not tolerate multiple 
       ## versions of APSIM-X installed, date 2019-12-12
       if(length(apsimx.versions) > 1){
@@ -131,7 +131,7 @@ auto_detect_apsimx <- function(){
         apsimx.name <- apsimx.versions
       }
       ## APSIM executable
-      st1 <- "/usr/local/lib/apsim/"
+      st1 <- "/data/cephfs/punim0898/ApsimX_x86/ApsimX/"
       st3 <- "/Bin/Models.exe" 
       apsimx_dir <- paste0(st1,apsimx.name,st3)
     }
